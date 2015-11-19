@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="weaveSearch">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Weave Query</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/weave-favicon.ico">
+    
+</head>
+
+<body>
+    <div class="header">
+        
+        <div class="logo">
+           <a href="index.html"> <img class="logo" src="images/weave-circle.png" />
+           </a>
+        </div>
+        
+        <div class="nav">
+            <a href="login.html">Sign In</a> |    
+            <a href="register.html">Register</a>
+        </div>
+    
+    </div>
+    
+    <div class="main">
+        
+        <input class="search" ng-model="query" type="text" placeholder="Location Slug (Required)">      
+        <input class="search" type="text" placeholder="Appointment ID">
+
+    </div>       
+     
+    
+     <div ng-controller="mainCtrl">
+         
+         <table class="table" rules="all">
+             <thead>
+              <tr>
+                <th>Created At</th>
+                <th>Action</th>
+                <th>Appt Date/Time</th>  
+                <th>Operatory</th>
+                <th>Type</th>  
+                <th>Practitioner</th>   
+                <th>Status</th>
+                 
+              </tr>
+              </thead>    
+              <tbody>
+             
+              <tr ng-repeat="appt in appointments | filter:query">
+                <td class = "createdat" ng-bind="appt.createdat"></td>
+                <td class = "operation" ng-bind="appt.operation"></td>  
+                <td class = "dateTime" ng-bind="appt.data.apt_datetime"></td>  
+                <td class = "op" ng-bind="appt.data.apt_operatory"></td>
+                <td class = "type" ng-bind="appt.data.apt_type"></td>  
+                <td class = "practitioner" ng-bind="appt.data.apt_practitioner"></td>
+                <td class = "status" ng-bind="appt.data.apt_pms_status"></td>
+                <td class = "slug" ng-show ng-bind="appt.slug"></td>  
+                <td class = "appointmentid" ng-show ng-bind="appt.data.appointment_id"></td>  
+                
+              </tr>
+              </tbody>
+         </table>
+            
+      
+     </div>
+    
+    
+    <div class="footer">
+    
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/loginCtrl.js"></script>
+    <script src="js/buttonCtrl.js"></script>
+    
+</body>
+    
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="weave-favicon.ico">
+</head>
+
+<body>
+    
+</body>
+</html>
+
+
+<div ng-controller="loginCtrl">
+    <h3>Please sign in.</h3>
+
+    <form action="/" id="mainLogin">
+
+        <input type="text" name="email" id="email" placeholder="Email" ng-model="username"><br>
+        <input type="password" name="password" id="password" placeholder="Password" ng-model="password">
+
+    </form>
+
+    <button type="button" ng-click="submit()">Sign In</button>
+</div>
