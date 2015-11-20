@@ -28,8 +28,12 @@
     
     <div class="main">
         
-        <input class="search" ng-model="query" type="text" placeholder="Location Slug (Required)">      
-        <input class="search" type="text" placeholder="Appointment ID">
+        <span class = "input">
+            
+            <input class="search" ng-model="slug" type="text" placeholder="Location Slug (Required)">      
+            <input class="search" ng-model="search.appt" type="text" placeholder="Appointment ID">
+        
+        </span>
 
     </div>       
      
@@ -51,7 +55,7 @@
               </thead>    
               <tbody>
              
-              <tr ng-repeat="appt in appointments | filter:query">
+              <tr ng-repeat="appt in appointments | filter:slug">
                 <td class = "createdat" ng-bind="appt.createdat"></td>
                 <td class = "operation" ng-bind="appt.operation"></td>  
                 <td class = "dateTime" ng-bind="appt.data.apt_datetime"></td>  
@@ -80,7 +84,6 @@
     <script src="js/mainCtrl.js"></script>
     <script src="js/routes.js"></script>
     <script src="js/loginCtrl.js"></script>
-    <script src="js/buttonCtrl.js"></script>
     
 </body>
     
