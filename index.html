@@ -31,7 +31,7 @@
         <span class = "input">
             
             <input class="search" ng-model="slug" type="text" placeholder="Location Slug (Required)">      
-            <input class="search" ng-model="search.appt" type="text" placeholder="Appointment ID">
+            <input class="search" ng-model="appt" type="text" placeholder="Appointment ID">
         
         </span>
 
@@ -55,7 +55,7 @@
               </thead>    
               <tbody>
              
-              <tr ng-repeat="appt in appointments | filter:slug">
+              <tr ng-repeat="appt in appointments | filter:slug | filter: appt">
                 <td class = "createdat" ng-bind="appt.createdat"></td>
                 <td class = "operation" ng-bind="appt.operation"></td>  
                 <td class = "dateTime" ng-bind="appt.data.apt_datetime"></td>  
