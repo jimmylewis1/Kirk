@@ -1,11 +1,19 @@
-body {
+.background {
     background-color: #27ace3;
+    border-radius: 3px;
+    max-height: 400px;
+    max-width: 150px;
 }
 
-h3 {
+.title {
+    margin: 10px 0px 3px 5px;
+}
+
+h4 {
     color: #fff;
     font-family: sans-serif;
     font-weight: 300;
+    padding-top: 10px;
 }
 
 input {
@@ -13,11 +21,11 @@ input {
     border: none;
     border-radius: 3px;
     margin-top: 10px;
+    margin-left: 11px;
 }
 
 button {
-    margin-top: 10px;
-    margin-left: 81px;
+    margin: 10px 0px 10px 11px;
 }
 
 .center {
