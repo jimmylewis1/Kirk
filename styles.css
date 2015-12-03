@@ -23,14 +23,19 @@
     font-weight: 200;
     float: right;
     padding-top: 2.7%;
-    padding-right: 2%;
     z-index: 0;
 }
 
-.nav a {
-    padding: 0.5%;
+button {
+    display: inline;
+    padding: 3.5%;
     text-decoration: none;
     color: #fff;
+    border-radius: 3px;
+}
+
+.buttonLeft {
+    margin-right: 2%;
 }
 
 .nav a:hover {
