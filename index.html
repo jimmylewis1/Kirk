@@ -19,9 +19,14 @@
            </a>
         </div>
         
-        <div class="nav">
-            <button class="buttonLeft" ng-click="login()">Sign In</button>    
-            <button class="buttonRight" ng-click="logout()">Logout</button>
+        <div class="nav" ng-controller="mainCtrl">
+            <div class="signInButt" ng-hide="authData">
+                <button ng-click="login()">Sign In</button>  
+            </div>
+            <div class="logOutButt" ng-show="authData">
+                <img class="profilePic" ng-src="{{ authData.google.cachedUserProfile.picture }}"/>
+                <button ng-click="logout()">Logout</button>
+            </div>
         </div>
     
     </div>
