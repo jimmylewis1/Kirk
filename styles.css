@@ -34,45 +34,37 @@
 }
 
 button {
-   border-top: 1px solid #00090d;
-   background: #565859;
-   background: -webkit-gradient(linear, left top, left bottom, from(#01060a), to(#565859));
-   background: -webkit-linear-gradient(top, #01060a, #565859);
-   background: -moz-linear-gradient(top, #01060a, #565859);
-   background: -ms-linear-gradient(top, #01060a, #565859);
-   background: -o-linear-gradient(top, #01060a, #565859);
+   background: #c0c0c0;
    padding: 0.5px 5px;
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
-   border-radius: 5px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: #ffffff;
+   border-radius: 3px;
+   color: #01060a;
    font-size: 13px;
+   font-weight: 300;
    font-family: Helvetica, Arial, Sans-Serif;
    text-decoration: none;
    vertical-align: middle;
    }
 
 button:hover {
-   border-top-color: #2f373d;
-   background: #2f373d;
-   color: #ffffff;
+   background: #9b9b9b;
+   color: #01060a;
    }
 
+/*
 button:active {
    border-top-color: #1b435e;
    background: #1b435e;
    }
+*/
 
 .signInButt {
     margin-right: 2%;
 }
 
 .main {
-    margin-top: 3%;
+    margin: 20px 0px 0px 2%;
 }
 
 
